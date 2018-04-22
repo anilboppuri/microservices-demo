@@ -1,0 +1,17 @@
+spring.application.name:
+  zuul-service
+server:
+   port: 8093
+#zuul:
+  #routes:
+   # test :
+    # path: /greetings
+     #service-id: HELLO-CLIENT
+     #strip-prefix: false 
+    
+  zuul:
+    routes:
+     test :
+      path: /greetings
+      service-id: HELLO-CLIENT
+      strip-prefix: false 

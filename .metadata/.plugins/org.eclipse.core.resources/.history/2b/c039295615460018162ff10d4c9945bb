@@ -1,0 +1,32 @@
+package com.javaport.service.resources;
+
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@RestController
+@RequestMapping("/reverse")
+
+public class StringReverseController {
+
+	
+	@HystrixCommand(fallbackMethod="onFailure", groupKey="helloservice",commandKey="hellomethod",threadPoolKey="helloThread")
+	
+	@GetMapping
+	public String test(){
+		
+		return "called through zuul routing ..";
+	}
+	@GetMapping("/{input}")
+	public String method(@PathVariable String input ){
+	
+		return new StringBuffer(input).reverse().toString();
+
+	}
+
+}

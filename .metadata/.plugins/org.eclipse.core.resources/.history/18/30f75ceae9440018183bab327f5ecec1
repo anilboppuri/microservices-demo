@@ -1,0 +1,12 @@
+spring.application.name:
+  zuul-service
+server:
+   port: 8093
+zuul:
+  routes:
+   test :
+    path: /reverse
+    service-id:  HELLO-SERVICE
+    strip-prefix: false 
+    
+  

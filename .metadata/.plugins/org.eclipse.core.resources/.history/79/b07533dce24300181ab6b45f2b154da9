@@ -1,0 +1,5 @@
+package com.example.zullservice.filters;
+
+public class ErrorFilter {
+
+}

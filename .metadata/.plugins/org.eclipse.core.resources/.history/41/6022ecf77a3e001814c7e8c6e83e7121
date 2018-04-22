@@ -1,0 +1,9 @@
+package com.javaport.service.resources;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@ResourceMapping
+public class HelloResource {
+
+}
