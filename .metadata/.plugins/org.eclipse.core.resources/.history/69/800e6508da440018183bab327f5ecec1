@@ -1,0 +1,5 @@
+package com.javaport.client.resources;
+
+public class GreetingResource {
+
+}

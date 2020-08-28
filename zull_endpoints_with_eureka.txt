@@ -1,0 +1,9 @@
+End points:
+
+1. Eureka Registry Service: http://localhost:8090/
+2. HelloService - end point : http://localhost:8091/rest/hello/service 
+3. HelloClient end point : http://localhost:8092/rest/hello/client
+4. Zuul API Gateway : calling HelloService endpoint: http://localhost:8093/api/service/rest/hello/service
+5. Zuul API Gateway : calling HelloClient endpoint( which calls HelloService ) : http://localhost:8093/api/client/rest/hello/client
+6. Zuul API Gateway : calling HelloClient endpoint by zuul gateway api - reverse proxy: http://localhost:8093/api/client/greetings
+7. 6. Zuul API Gateway : calling StringReverseController(Service) endpoint by zuul gateway api : http://localhost:8093/api/service/reverse/Dinesh

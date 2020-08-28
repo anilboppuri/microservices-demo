@@ -1,0 +1,22 @@
+ zuul:
+   prefix: /api
+   routes:
+     service:
+        path: /service/** 
+        serviceId: HELLO-SERVICE
+     
+ 
+ eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+      instance:
+      hostname: localhost
+   
+ server:
+   port: 8093
+   
+ spring:
+     application: 
+       name: zuul-service
+     

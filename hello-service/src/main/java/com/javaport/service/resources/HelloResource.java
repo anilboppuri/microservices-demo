@@ -1,0 +1,28 @@
+package com.javaport.service.resources;
+
+import javax.annotation.Resource;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@RestController
+@RequestMapping("/rest/hello/service")
+public class HelloResource {
+	
+	@HystrixCommand(fallbackMethod="onFailure", groupKey="helloservice",commandKey="hellomethod",threadPoolKey="helloThread")
+	
+	@GetMapping
+	public String hello(){
+		
+		return "hello Boot World!";
+	}
+	
+	public String onFailure(){
+		
+		return "Problem completing your request....";
+	}
+
+}

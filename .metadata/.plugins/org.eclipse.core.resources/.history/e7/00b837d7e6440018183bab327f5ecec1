@@ -1,0 +1,2 @@
+zuul.routes.reverse.url=http://localhost:8091
+eureka.client.serviceUrl.defaultZone=http://localhost:8090/eureka

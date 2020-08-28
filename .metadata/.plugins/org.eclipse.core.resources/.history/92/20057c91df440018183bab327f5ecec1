@@ -1,0 +1,18 @@
+package com.javaport.service.resources;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StringReverseController {
+	@GetMapping("/reverse/{input}")
+	public String method(@PathVariable String input ){
+	
+		
+		return new StringBuffer(input).reverse().toString();
+		
+		
+	}
+
+}

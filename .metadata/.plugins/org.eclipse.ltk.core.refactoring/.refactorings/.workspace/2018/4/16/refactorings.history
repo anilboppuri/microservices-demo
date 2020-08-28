@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;cloud-config&apos; to &apos;cloud-config-server&apos;&#x0D;&#x0A;- Original element: &apos;cloud-config&apos;&#x0D;&#x0A;- Renamed element: &apos;cloud-config&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;cloud-config&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=cloud-config" name="cloud-config-server" references="true" stamp="1524140612977" version="1.0"/>
+</session>
